@@ -16,8 +16,12 @@ function QuestionItem({ question, setQuestions, questions }) {
       .then(response => response.json())
       .then(data => {
         console.log(data)
-        event.target.parentNode.remove()
+        // event.target.parentNode.remove()
+        const updatedList = questions.filter(q => q.id !== id)
+        setQuestions(updatedList)
       })
+
+      
     
   }
 
