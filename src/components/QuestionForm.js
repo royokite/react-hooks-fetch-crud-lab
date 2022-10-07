@@ -36,14 +36,6 @@ function QuestionForm({ questions, setQuestions }) {
       .then(newData => {
         const updatedData = [...questions, newData]
         setQuestions(updatedData)
-        setFormData({
-          prompt: "",
-          answer1: "",
-          answer2: "",
-          answer3: "",
-          answer4: "",
-          correctIndex: 0,
-        })
       })
   }
 
